@@ -1,0 +1,36 @@
+/* Speed Conversion Create a program that converts speed given in kilometers per  hour (km/h) to meters per second (m/s) or vice versa.  
+Use the conversion factor: m/s = km/h * 1000 / 3600  
+*/
+package com.Assignment1;
+
+import java.util.Scanner;
+
+public class SpeedConversion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println(" Enter your type of conversion: \n 1. km/hr to m/s \n 2. m/s to km/hr");
+		int ch = sc.nextInt();
+		switch(ch) {
+		case 1:
+			System.out.println("Enter speed in km/hr: ");
+			double kSpeed = sc.nextDouble();
+			double mSpeed = kSpeed*1000/3600;
+			System.out.println("Speed in m/s = "+mSpeed);
+		break;
+		
+		case 2:
+			System.out.println("Enter speed in m/s: ");
+			mSpeed = sc.nextDouble();
+			kSpeed = mSpeed*3600/1000;
+			System.out.println("Speed in km/hr "+kSpeed);
+		break;
+		
+		default:
+			System.out.println("Invalid choice!! Put correct choice..");
+			sc.close();
+		}
+
+	}
+
+}
