@@ -1,0 +1,36 @@
+/*ComputeMarks Write a program that takes the student name, Physics,  Chemistry, and Mathematics Marks of student as input. For each subject, marks are out of 100. Compute the total marks of that student, percentage in each  subject and total percentage.  
+Print the out as “[Student Name] obtained following % of marks in PCM:  Physics: [% in Physics ], Chemistry : [% in Chem], Maths : [% in Maths]  Total : [Total %]”  
+*/
+
+
+package com.Assignment1;
+
+import java.util.Scanner;
+
+public class ComputeMarks {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter student name: ");
+		String studentName = sc.next();
+		
+		System.out.println("Enter marks for Physics: ");
+		double P = sc.nextInt();
+		
+		System.out.println("Enter marks for Chemsitry: ");
+		double C = sc.nextInt();
+		
+		System.out.println("Enter marks for Mathematics: ");
+		double M = sc.nextInt();
+		
+		double Phy=(P/100)*100;
+		double Chem=(C/100)*100;
+		double Maths=(M/100)*100;
+		
+		double Perct=((P+C+M)/300)*100;
+		
+		System.out.println(" ["+studentName+"] "+ "obtained following % of marks in PCM: \n [Physics]: "+ Phy +"\n [Chemistry]: "+ Chem +"\n [Maths]: "+Maths+"\n Total: ["+Perct+"]");
+	}
+
+}
