@@ -1,0 +1,27 @@
+/*
+Weight Conversion In some UK shops grocery items sold are weighed in pounds.  Plan developing a program which converts the item weight in KG.  
+Where 1 Pound = 453.592 gm  
+Test this with entering different input in pounds and print the weight in KG  
+*/
+
+package com.Assignment1;
+
+import java.util.Scanner;
+
+public class WeightConversion {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter weight in pounds: ");
+		double pound = sc.nextDouble();
+		
+		double conversionFactor = 0.453592;
+		double weight = pound*0.453592;
+		
+		System.out.println("Weight in Kg: "+ weight);
+		sc.close();
+
+	}
+
+}
