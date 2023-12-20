@@ -1,0 +1,28 @@
+/*
+Time conversion Develop a program which converts input seconds in hours and  minutes and seconds.  
+Eg. 7515 seconds = 2 Hours, 5 minutes and 15 seconds  
+*/
+package com.Assignment1;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class TimeConversion {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter seconds: ");
+		double sec = sc.nextInt();
+		
+		DecimalFormat df=new DecimalFormat("#.##");
+		
+		String hours = df.format(sec/3600);
+		String mins = df.format((sec%3600)/60);
+		String secs =  df.format(sec%60);
+		
+		
+		System.out.println(sec + " Seconds = " + hours + " hours," + mins + " minutes, and " + secs + " seconds." );
+		
+	}
+
+}
