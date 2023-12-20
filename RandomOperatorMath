@@ -1,0 +1,25 @@
+/*
+ Write a program that generates two random integers  between 1 and 10 and a random arithmetic operator (+, -, *, or /), then prints the  equation and the result of the operation. 
+*/
+package com.Assignment1;
+
+import java.util.Random;
+
+public class RandomOperatorMath {
+
+	public static void main(String[] args) {
+		Random ran = new Random();
+		
+		int num1 = ran.nextInt(10)+1;
+		int num2 = ran.nextInt(10)+1;
+		
+		System.out.println("num1 = "+num1);
+		System.out.println("num2 = "+num2);
+		System.out.println("num1 + num2 = "+ (num1+num2));
+		System.out.println("num1 - num2 = "+ (num1-num2));
+		System.out.println("num1 * num2 = "+ (num1*num2));
+		System.out.println("num1 / num2 = "+ (num1/num2));
+
+	}
+
+}
